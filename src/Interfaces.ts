@@ -11,7 +11,7 @@ export function getPerson(): IPersonData {
     return {
         name: 'Petr',
         secondName: 'Smith',
-        age: '7',
+        age: 7,
     };
 }
 
@@ -27,6 +27,24 @@ export interface IStudentData {
 Данные должны храниться в объектах, соответствующих интерфейсу `IStudentData`.
  */
 export function getStudentsData(): IStudentData[] {
+    const stud: Array<IStudentData> = [];
+    let stud1: IStudentData = {
+        name: 'Ivan',
+        secondName: 'Petrov',
+        age: 20,
+        phone: '+7(555)555-55-50',
+    };
+    stud.push(stud1);
+    stud1 = {
+        name: 'Stepan',
+        secondName: 'Petrov',
+        age: 19,
+        phone: '+7(555)555-55-51',
+    };
+    stud.push(stud1);
+    stud1 = { name: 'Petr', secondName: 'Ivanov', age: 19 };
+    stud.push(stud1);
+    return stud;
     /**
      * Данные студентов которые нужно передать:
      *
